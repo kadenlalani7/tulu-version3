@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GoogleLogin } from 'react-google-login';
 import Icon from './icon';
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 
 const Home = () => {
     const navigate = useNavigate();
@@ -23,6 +24,9 @@ const Home = () => {
       const handleLogin = (e) => {
         e.preventDefault();
         navigate('/login');}
+
+      const responseFacebook = (response) => {
+            console.log(response);}
         
     return ( 
         <div className="h-screen text-center justify-center pt-12">
@@ -41,16 +45,14 @@ const Home = () => {
                 <div className="basis-1/2">
                     <div className="container mx-auto">
                         {/* <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"> */}
-                        <GoogleLogin
-                            clientId='894452106348-cel1tv9iid6s6pdp8056oa44uu5oitld.apps.googleusercontent.com'
-                            render={(renderProps) => (
-                                <button className="h-12 mt-3 text-white w-[420px] rounded-full bg-blue-800 hover:bg-blue-900 my-4"><i className="fa fa-facebook mr-2"></i>Continue with Facebook</button>
-                            )}
-                            onSuccess={googleSuccess}
-                            onFailure={googleError}
-                            cookiePolicy="single_host_origin"
+                        <FacebookLogin
+                            appId="1588402374862175"
+                            autoLoad
+                            fields="name,email,picture"
+                            callback={responseFacebook}
+                            // redirectUri='https://www.google.com'
+                            render={(renderProps) => (<button className="h-12 mt-3 text-white w-[420px] rounded-full bg-blue-800 hover:bg-blue-900 my-4" onClick={renderProps.onClick} disabled={renderProps.disabled}><i className="fa fa-facebook mr-2"></i>Continue with Facebook</button>)}
                             />
-
                             <GoogleLogin
                             clientId='894452106348-cel1tv9iid6s6pdp8056oa44uu5oitld.apps.googleusercontent.com'
                             render={(renderProps) => (
