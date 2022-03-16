@@ -16,47 +16,58 @@ const Signup = () => {
         setForm({ ...form, [e.target.name]:e.target.value});
     }
     return(
-<div className="bg-grey-lighter min-h-screen flex flex-col">
+        <div className="bg-grey-lighter min-h-screen flex flex-col pt-12">
+            <div className="">
+                <h1 className="font-medium text-9xl flex justify-center text-white">
+                    tulu.
+                </h1>
+            </div>
             <div className="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-                <div className="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-                    <h1 className="mb-8 text-3xl text-center">Sign up</h1>
+                <div className="bg-[#084C5E] px-32 py-8 rounded-[50px] shadow-md text-white w-[520px]">
+                    <h1 className="mb-8 text-2xl font-bold text-center">create your travel profile</h1>
                     <input 
                         type="text"
-                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        className="block placeholder:text-white text-white border-4 border-white w-full p-2 rounded-full bg-transparent mb-4 pl-4"
                         name="firstName"
-                        placeholder="First Name" />
+                        placeholder="first name" />
                     <input 
                         type="text"
-                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        className="block placeholder:text-white text-white border-4 border-white w-full p-2 rounded-full bg-transparent mb-4 pl-4"
                         name="lastname"
                         placeholder="Last Name" />
 
                     <input 
                         type="text"
-                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        className="block placeholder:text-white text-white border-4 border-white w-full p-2 rounded-full bg-transparent mb-4 pl-4"
                         name="email"
                         placeholder="Email" 
                         onChange={handleUser}/>
 
                     <input 
                         type="password"
-                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        className="block placeholder:text-white text-white border-4 border-white w-full p-2 rounded-full bg-transparent mb-4 pl-4"
                         name="password"
                         placeholder="Password" 
                         onChange={handleUser}/>
                     <input 
                         type="password"
-                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        className="block placeholder:text-white text-white border-4 border-white w-full p-2 rounded-full bg-transparent mb-4 pl-4"
                         name="confirm_password"
                         placeholder="Confirm Password" 
                         onChange={handleUser}/>
 
-                    <button
+                    <div className="flex items-center justify-center">
+                        <button className="placeholder:text-white bg-transparent hover:text-gray-300 text-white text-[26px] font-bold px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                            next
+                        </button>
+                    </div>
+
+                    {/* <button
                         type="submit"
                         className="w-full text-center py-3 rounded bg-green text-white hover:bg-green-dark focus:outline-none my-1"
-                    >Create Account</button>
+                    >Create Account</button> */}
 
-                    <div className="text-center text-sm text-grey-dark mt-4">
+                    {/* <div className="text-center text-sm text-grey-dark mt-4">
                         By signing up, you agree to the 
                         <a className="no-underline border-b border-grey-dark text-grey-dark" href="#">
                             Terms of Service
@@ -64,15 +75,15 @@ const Signup = () => {
                         <a className="no-underline border-b border-grey-dark text-grey-dark" href="#">
                             Privacy Policy
                         </a>
-                    </div>
+                    </div> */}
                 </div>
 
-                <div className="text-grey-dark mt-6">
+                {/* <div className="text-grey-dark mt-6">
                     Already have an account? 
                     <a className="no-underline border-b border-blue text-blue" href="../login/">
                         Log in
                     </a>.
-                </div>
+                </div> */}
             </div>
         </div>
     )
