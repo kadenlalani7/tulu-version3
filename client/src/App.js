@@ -8,6 +8,7 @@ import Signup from './components/Login/Signup';
 import Dashboard from './components/Dashboard/Dashboard';
 import Header from './components/Header/HeaderL';
 import Connect from './components/Connect/Connect';
+import Explore from './components/Explore/Explore';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/signup" exact element={<Signup/>} />
           <Route path="/dashboard" exact element={<Dashboard/>} />
           <Route path="/connect" exact element={<Connect/>} />
+          <Route path="/explore" exact element={<Explore/>} />
           {/* <Route path="/moreinfo" exact element={<Age/>} /> */}
         </Routes>
     </BrowserRouter>
