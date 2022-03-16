@@ -30,10 +30,10 @@ const Home = () => {
                 <h1 className="font-medium text-9xl flex justify-center text-white">
                     tulu.
                 </h1>
-                <h2 className="text-white flex justify-center text-right"> 
+                <h2 className="text-white text-2xl flex justify-center text-right"> 
                     travel unliminted.
                 </h2>
-                <h2 className="text-white flex justify-center text-right"> 
+                <h2 className="text-white text-2xl flex justify-center text-right"> 
                     live unliminted.
                 </h2>
             </div>
