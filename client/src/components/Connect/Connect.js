@@ -1,5 +1,4 @@
 import React from 'react'
-import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
 import { useNavigate } from 'react-router-dom';
 import profile1 from '../../images/Maskgroup-1.png';
 import profile2 from '../../images/Maskgroup.png';
