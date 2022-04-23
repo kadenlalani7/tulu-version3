@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import profile1 from '../../images/Maskgroup-1.png';
+
 
 // import logo from '../images/tulu-logo.png';
 
@@ -15,10 +17,23 @@ const Dashboard = () => {
 
 
     return(
-        <div className="relative background pt-8 pb-20 px-4 sm:px-6 lg:pt-12 lg:pb-28 lg:px-8">            
-            <div className="absolute inset-0">
-                <div className="h-1/3 sm:h-2/3" />
+        <div className="relative background sm:px-6 lg:pt-12 lg:pb-28 lg:px-8">
+            
+            <div className="bg-transparent">
+                <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between flex-wrap">
+
+                        <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                            <img src={profile1} class="w-12 h-12 rounded-full" />
+                        </div>
+
+                        <div className="w-0 flex-1 flex items-center">
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
             <div className="relative max-w-7xl mx-auto">
                 <div className="">
                     <h1 className="font-medium text-9xl flex justify-center text-white">
